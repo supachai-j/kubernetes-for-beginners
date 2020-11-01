@@ -148,3 +148,4 @@ kubemaster $ kubectl delete pod nginx
 pod "nginx" deleted
 kubemaster $
 ```
+Installation and testing is completed. Thanks 
