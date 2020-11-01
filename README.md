@@ -1,4 +1,5 @@
 # kubernetes-for-beginners
+จะเป็นการเรียนรู้เกี่ยวกับเรื่อง Kubernetes เบื้องต้น เหมาะสำหรับคนที่กำลังเริ่มต้นศึกษา
 
 ## Prepare/Install vagrant and virtualbox on win10
 
