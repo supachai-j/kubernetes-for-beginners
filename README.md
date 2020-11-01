@@ -40,10 +40,15 @@ vagrant up
 ### SSH to each node
 
 ```
-set VAGRANT_PREFER_SYSTEM_BIN=0
 vagrant ssh kubemaster
 vagrant ssh kubenode01
 vagrant ssh kubenode02
+```
+If Win10 can't ssh to all node in vagrant
+https://github.com/hashicorp/vagrant/issues/9950
+
+```
+$env:VAGRANT_PREFER_SYSTEM_BIN="0"
 ```
 
 ### stop and detroy lab environment
