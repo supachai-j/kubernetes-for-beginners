@@ -23,7 +23,7 @@ install virtualbox
 brew cask install vitualbox
 ```
 
-### Deploy kubemaster 1 node and kubenode 2 nodes
+## Deploy kubemaster 1 node and kubenode 2 nodes
 
 ### Clone git to machine
 ```
@@ -44,7 +44,7 @@ vagrant ssh kubemaster
 vagrant ssh kubenode01
 vagrant ssh kubenode02
 ```
-If Win10 can't ssh to all node in vagrant
+If Win10 can't ssh to all node in vagrant, How to fixed like below.
 https://github.com/hashicorp/vagrant/issues/9950
 
 ```
