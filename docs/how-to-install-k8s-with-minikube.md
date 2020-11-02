@@ -87,3 +87,47 @@ minikube config set memory 16384
 ```
 minikube delete --all
 ```
+
+ตัวอย่างการเรียนรู้
+```
+$ minikube start
+😄  minikube v1.14.2 on Darwin 10.15.7
+✨  Automatically selected the virtualbox driver
+👍  Starting control plane node minikube in cluster minikube
+🔥  Creating virtualbox VM (CPUs=2, Memory=4000MB, Disk=20000MB) ...
+
+$kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4
+$kubectl expose deployment hello-minikube --type=NodePort --port=8080
+deployment.apps/hello-minikube created
+service/hello-minikube exposed
+$kubectl get pod
+NAME                              READY   STATUS    RESTARTS   AGE
+hello-minikube-6ddfcc9757-qlvnh   1/1     Running   0          8s
+
+$kubectl get pod -o wide
+NAME                              READY   STATUS    RESTARTS   AGE   IP           NODE       NOMINATED NODE   READINESS GATES
+hello-minikube-6ddfcc9757-qlvnh   1/1     Running   0          14s   172.17.0.3   minikube   <none>           <none>
+
+$kubectl get svc hello-minikube
+NAME             TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+hello-minikube   NodePort   10.107.203.179   <none>        8080:32536/TCP   29s
+
+$minikube service hello-minikube 
+|-----------|----------------|-------------|-----------------------------|
+| NAMESPACE |      NAME      | TARGET PORT |             URL             |
+|-----------|----------------|-------------|-----------------------------|
+| default   | hello-minikube |        8080 | http://192.168.99.103:32536 |
+|-----------|----------------|-------------|-----------------------------|
+🎉  Opening service default/hello-minikube in default browser...
+
+$ kubectl port-forward service/hello-minikube 
+Forwarding from 127.0.0.1:7080 -> 8080
+Forwarding from [::1]:7080 -> 8080
+Handling connection for 7080
+Handling connection for 7080
+^C%                                                                                                                       $                        
+$minikube delete --all
+🔥  Deleting "minikube" in virtualbox ...
+💀  Removed all traces of the "minikube" cluster.
+🔥  Successfully deleted all profiles
+```
