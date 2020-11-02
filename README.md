@@ -60,5 +60,5 @@ vagrant destroy
 ```
 
 ## Next Step Learning guide
-- [How To Install K8S all-in-one with minikube](docs/how-to-install-k8s-with-kubeadm.md)
+- [How To Install K8S all-in-one with minikube](docs/how-to-install-k8s-with-minikube.md)
 - [How To Install K8S Cluster with Kubeadm](docs/how-to-install-k8s-with-kubeadm.md)
