@@ -97,9 +97,11 @@ $ minikube start
 🔥  Creating virtualbox VM (CPUs=2, Memory=4000MB, Disk=20000MB) ...
 
 $kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4
+
 $kubectl expose deployment hello-minikube --type=NodePort --port=8080
 deployment.apps/hello-minikube created
 service/hello-minikube exposed
+
 $kubectl get pod
 NAME                              READY   STATUS    RESTARTS   AGE
 hello-minikube-6ddfcc9757-qlvnh   1/1     Running   0          8s
@@ -125,7 +127,8 @@ Forwarding from 127.0.0.1:7080 -> 8080
 Forwarding from [::1]:7080 -> 8080
 Handling connection for 7080
 Handling connection for 7080
-^C%                                                                                                                       $                        
+^C%        
+
 $minikube delete --all
 🔥  Deleting "minikube" in virtualbox ...
 💀  Removed all traces of the "minikube" cluster.
