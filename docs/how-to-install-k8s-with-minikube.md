@@ -134,3 +134,8 @@ $minikube delete --all
 💀  Removed all traces of the "minikube" cluster.
 🔥  Successfully deleted all profiles
 ```
+
+อ้างอิงเพิ่งเติมตามนี้ link นี้
+https://minikube.sigs.k8s.io/docs/
+
+create by bugstum
