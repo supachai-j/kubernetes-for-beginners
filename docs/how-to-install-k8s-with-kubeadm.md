@@ -142,6 +142,16 @@ NAME    READY   STATUS    RESTARTS   AGE     IP          NODE         NOMINATED 
 nginx   1/1     Running   0          2m16s   10.44.0.1   kubenode01   <none>           <none>
 kubemaster $
 ```
+
+Testing expose service in container to external network.
+```
+kubectl port-forward --address 0.0.0.0 pod/nginx 9980:80
+``` 
+Try browsing http://ip-address-k8s:9980 and see  
+![nginx defualt page](images/nginx-demo-1.png)
+
+Press Ctrl + C, if you have stop it.
+
 Detele pod nginx on k8s cluster.
 ```
 kubemaster $ kubectl delete pod nginx

@@ -1,0 +1,11 @@
+.vagrant
+
+nginx-key
+nginx-license
+vars
+logs
+.log
+.DS_Store
+packages
+.crt
+.key
